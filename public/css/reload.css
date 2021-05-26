@@ -1,0 +1,28 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+}
+
+.row{
+    height: 100%;
+}
+img{
+    width:20%;
+    height: 20%;
+}
+
+p{
+    display: inline;
+}
+
+.col-8{
+    text-align: center;
+}
+
+
+
