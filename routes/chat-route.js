@@ -161,7 +161,7 @@ router.get("/:code", fetchRoom, async (req, res) => {
         if (!userConnection) {
           try {
             let res = await axios.put(
-              `http://nowie-chat-app.herokuapp.com/room/${CODE}/delete?name=${NAME}`
+              `http://localhost:5000/room/${CODE}/delete?name=${NAME}`
             );
             console.log("ROOM RECEIVED AFTER DELETING USER ", res);
           } catch (error) {

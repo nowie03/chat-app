@@ -15,7 +15,7 @@ form.addEventListener("submit", async (event) => {
     event.preventDefault()
     let res;
     try {
-        res = await axios.put(`http://nowie-chat-app.herokuapp.com/room/${codeInput.value}/add?name=${usernameInput.value}`);
+        res = await axios.put(`http://localhost:5000/room/${codeInput.value}/add?name=${usernameInput.value}`);
        
     } catch (error) {
         console.log(error.message);
@@ -26,20 +26,20 @@ form.addEventListener("submit", async (event) => {
         codeInput.focus();
     }
     else {
-        window.location.replace(`http://nowie-chat-app.herokuapp.com/chat/${codeInput.value}?name=${usernameInput.value}`);
+        window.location.replace(`http://localhost:5000/chat/${codeInput.value}?name=${usernameInput.value}`);
     }
 })
 
 const createLinkEventListener = async (event) => {
     let code=generateCode()
     try {
-        let res = await axios.post(`http://nowie-chat-app.herokuapp.com/room/${code}?name=${usernameInput.value}`);
+        let res = await axios.post(`http://localhost:5000/room/${code}?name=${usernameInput.value}`);
         console.log(res);
    } catch (error) {
        console.log(error.message);
     }
     
-    window.location.replace(`http://nowie-chat-app.herokuapp.com/chat/${code}?name=${usernameInput.value}`);
+    window.location.replace(`http://localhost:5000/chat/${code}?name=${usernameInput.value}`);
 };
 
 usernameInput.addEventListener("keyup", (event) => {
