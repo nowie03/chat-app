@@ -117,7 +117,7 @@ logoutIconList.forEach((logoutIcon) => {
     console.log("USER-LEFT EVENT EMITTED WITH DATA", USERNAME);
     try {
       let res = await axios.put(
-        `http://localhost:5000/room/${CODE}/delete?name=${USERNAME}`
+        `http://nowie-chat-app.herokuapp.com/room/${CODE}/delete?name=${USERNAME}`
       );
       console.log("ROOM RECEIVED AFTER DELETING USER ", res);
     } catch (error) {
